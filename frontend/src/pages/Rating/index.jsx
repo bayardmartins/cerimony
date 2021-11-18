@@ -6,7 +6,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton'
 import Form from "react-bootstrap/Form";
 
 import api from '../../services/api';
-import './rating.css'
+import './styles.css'
 
 const Rating = () => {
     const [message, setMessage] = useState([]); 

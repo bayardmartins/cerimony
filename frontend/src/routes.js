@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NotFound from "./pages/404";
-import Login from "./pages/Login/login";
-import Rating from "./pages/Rating/rating";
-import Schedules from "./pages/Schedules/schedules";
-import Scheduling from "./pages/Scheduling/scheduling";
+import Login from "./pages/Login";
+import Rating from "./pages/Rating";
+import Schedules from "./pages/Schedules";
+import Scheduling from "./pages/Scheduling";
 
 export default function AppRoutes() {
 

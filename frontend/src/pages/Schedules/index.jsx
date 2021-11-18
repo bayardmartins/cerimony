@@ -2,11 +2,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import api from "../../services/api";
-import "./schedule.css";
 import { useNavigate } from 'react-router-dom';
 import BottomBar from '../../components/schedules/BottomBar';
 import AllCards from '../../components/schedules/AllCards';
 
+import "./styles.css";
 
 const Schedules = () => {
     const [schedulesData, setSchedules] = useState();

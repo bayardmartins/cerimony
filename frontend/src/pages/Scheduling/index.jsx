@@ -4,7 +4,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useParams } from "react-router-dom";
 import api from "../../services/api";
-import "./schedule.css";
+
+import "./styles.css";
 
 const Scheduling = () => {
   const { id } = useParams();
