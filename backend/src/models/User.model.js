@@ -19,6 +19,11 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
+
+  team: {
+    type: String,
+    required: false,
+  },
 })
 
 module.exports = mongoose.model('user', UserSchema)
