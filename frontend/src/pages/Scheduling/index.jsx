@@ -11,7 +11,6 @@ const Scheduling = () => {
   const { id } = useParams();
   const [date, setDate] = useState(new Date().toISOString().split(".")[0]);
   const [message, setMessage] = useState("");
-  const [option, setOption] = useState();
   const [employees, setEmployees] = useState([]);
   const [employee, setEmployee] = useState();
   const [topics, setTopics] = useState([]);
@@ -67,14 +66,12 @@ const Scheduling = () => {
 
   const fetchScheduling = async () => {
     const isValid =
-      date && option && employee && selTopics.length > 0 && message;
+      date && employee && selTopics.length > 0 && message;
     setIsAlertError(!isValid);
 
     if (!isValid) {
       const altMessage = !date
         ? "A data é obrigatória."
-        : !option
-        ? "Selecione uma opção (One on One / Feedback)."
         : !employee
         ? "Selecione um colaborador."
         : !selTopics || selTopics.length === 0
@@ -96,7 +93,6 @@ const Scheduling = () => {
     const strTime = hours + ":" + minutes;
 
     const data = {
-      type_schedule: option,
       date: date.split("T")[0],
       hour: strTime,
       state: "pending",
@@ -108,6 +104,7 @@ const Scheduling = () => {
 
     try {
       setIsAlertError(false);
+      console.log(data);
       const response = await api.post("/schedules", data);
 
       if (response.data.message) {
@@ -146,30 +143,6 @@ const Scheduling = () => {
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
-      </div>
-
-      <div className="col mb-3">
-        <input
-          className="me-2"
-          type="radio"
-          id="oneOnOne"
-          name="option"
-          value="oneOnOne"
-          onChange={(evt) => setOption(evt.target.value)}
-        />
-        <label className="me-4" htmlFor="oneByOne">
-          One on One
-        </label>
-
-        <input
-          className="me-2"
-          type="radio"
-          id="feedback"
-          name="option"
-          value="feedback"
-          onChange={(evt) => setOption(evt.target.value)}
-        />
-        <label htmlFor="feedback">Feedback</label>
       </div>
 
       {employees && (

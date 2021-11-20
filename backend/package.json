@@ -14,7 +14,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/index.js",
+    "dev": "nodemon --delay 1500ms ./src/index.js",
     "start": "node ./src/index.js"
   },
   "keywords": [],

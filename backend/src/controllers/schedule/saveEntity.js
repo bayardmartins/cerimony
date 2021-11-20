@@ -1,6 +1,7 @@
 const ScheduleModel = require('../../models/Schedule.model');
 
 function parserEntity(data, currentUser) {
+    console.log(data);
     const person = JSON.parse(JSON.stringify(data.person))
     delete data.person;
 
@@ -23,7 +24,8 @@ function parserEntity(data, currentUser) {
 }
 
 async function saveEntity(req, res) {
-    const { type_schedule, created, date, hour, state, topics, description, person_one, person_two } = req.body
+    console.log('1');
+    const { created, date, hour, state, topics, description, person_one, person_two } = req.body
     const currentUser = { id: req.user.id }  // temp get by JWT
     const exists = await dateTimeValidation(date, hour, req.user.id)
 

@@ -3,7 +3,6 @@ const { Schema } = mongoose;
 const ObjectId = Schema.ObjectId;
 
 const SchedulesSchema = new Schema({
-  type_schedule: String,
   created: {
     type: Date,
     default: function() {

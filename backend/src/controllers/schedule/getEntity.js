@@ -17,7 +17,6 @@ async function getAll(req, res) {
 
         const objSch = {
             id: sch._id,
-            type_schedule: sch.type_schedule,
             date: sch.date,
             hour: sch.hour,
             state: sch.state,
