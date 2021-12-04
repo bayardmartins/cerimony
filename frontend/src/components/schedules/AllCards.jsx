@@ -1,7 +1,6 @@
 import Card from "./Card";
 
 const AllCards = (schedules) => {
-    // console.log(schedules)
     return (
         <div className="container card mt-5">
             <h2 className="mt-3 text-center">Ahfeed</h2>
