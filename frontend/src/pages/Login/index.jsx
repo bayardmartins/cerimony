@@ -27,7 +27,7 @@ const Login = () => {
     return (
         <div className="container text-center">
             <form className="form-signin" onSubmit={handleLogin}>
-                <h2>Ahfeed</h2>
+                <h2>Cerimony</h2>
                 <h4>Cerimônias inteligentes</h4>
                 <label htmlFor="inputEmail" className="sr-only">Email</label>
                 <input 

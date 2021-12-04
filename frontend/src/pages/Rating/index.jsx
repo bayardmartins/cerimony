@@ -40,7 +40,7 @@ const Rating = () => {
 
     return (
         <div className="container card mt-3">
-      <h2 className="mt-3 text-center">Ahfeed</h2>
+      <h2 className="mt-3 text-center">Cerimony</h2>
       <h4 className="text-center">Cerimônias inteligentes</h4>
       
       <div className="mb-3">
